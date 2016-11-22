@@ -1,0 +1,352 @@
+/*css reset, and when do so, per Cira remove font size, and all will be reset. Found youtube from code cascade that show's how to do. */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*---end of css reset. took out font-size 100%. Should I also take out font inherit?---*/
+
+  
+#container {
+    width: 960px;
+    margin: 0 auto; 
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #228536;  /*color theme for site is 90% primary colors, to go with green poker table feel*/
+}
+
+#logo {
+    position: relative;
+    width: 100%; /*got rid of height and used padding instead*/
+    padding-top: 6px;
+    padding-bottom: 2px;
+    font-family: 'Niconne', cursive;
+    text-align: center;
+    color: white;
+    background-color: red;
+    font-size: 65px; 
+    font-weight: 500;
+}
+
+#banner {
+    width: 960px; 
+    height: 238px;
+    z-index: 1;
+    background-color: blue;
+    margin: 0 auto; /*is it correct to put this?*/
+}
+
+#banner > img {
+    display: block;
+    position: relative;
+    margin: 13px 24px 12px 24px;
+    border: 5px solid orange;
+    border-radius: 12px;
+    float: left;
+}
+
+.banner-quote {
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    float: right;
+    padding-bottom: 3px;
+    padding-right: 13px;
+    color: white;
+}
+
+
+/* TURNS OUT MESSED UP MY CSS STYLING BECAUSE ON MICROSOFT INTERNET EXPLORER CHANGES DO NOT REGISTER CORRECTLY IN THAT BROWSER. No wonder the cloud9 previes screen looked like changes rendered, but when refreshed or tried several times to pop up into internet explorer browser looked different. Must go back to redo some parts*/
+
+.nav {
+     width: 945px; 
+     position: relative; /*should this be here or be absolute?*/
+     text-align: center; 
+    margin-left: 6px;
+
+   /*I would think to use z-index or margin negative to not have links flush to right...and would be done in nav li a area*/
+    padding-top: 8px;  
+    padding-bottom: 8px;
+    border-radius: 38px;
+    background-color: yellow;
+}
+
+.nav > ul { /*should this have a greater than sign? Added in case. Youtube guy didn't have a nav ul. greater than points to child of parent,fyi*/
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+}
+
+.nav > li {  
+    text-align: center; /* 11/16 not sure if needed this. added after reading W3Schools*/
+    font-weight: 900; 
+    font-size: 19px; 
+    border:3px dotted red;
+    border-radius: 25px;  
+    padding: 2px 13px 3px 13px; 
+    display: inline-block; 
+    background-color: white;
+    
+     /*Hate how squashed together link buttons are! Would it help to put breaks between links? Nope. end up being tiered. I like youtube English guy I found. https://www.youtube.com/watch?v=X_skOPBsYZE*/ /*maybe also check out w3schools: 9.4.1 Block formatting contexts 9.4.2 Inline formatting contexts*/
+}
+
+.nav > li > a { /*i added a:link 11/17. then i got rid of greater than signs and link. why can't i see this reflected on big screen??? */ /* 11/14 added greater than signs per youtube. Cira's example different as she has a:link, but I only want hover color. Info on W3schools differs from what saw online. 11/16 */  /*should I put back greater signs? Why does preview look totally diff than large pop out? Is it cause in Internet Explorer??? YES...I went to Chrome and totally diff. Normally work on Firefox. On Microsoft 10 laptop now, but swithed to chrome. 11/17*/
+
+    text-decoration: none;
+    display: block;
+    width: 150px;  /*how can I get these to center on entire line? They're still squished to right. check floating. also I changed width from 145 to 155px so all text on one line. now try 145 again. 11/16*/ 
+    text-align: center; /*got rid of padding*/
+    color: blue; 
+    border-radius: 25px; /*added border radius to see if more filled in. DOES IT EVEN MAKE SENSE TO HAVE BORDER RADIUS FOR A LINK??*/
+   }
+ 
+ .nav > li> a:hover {  /*how can I get hover background color to fill entire button?*/
+    color: purple;
+    font-weight: 600;
+    background-color: orange;
+    border-radius: 25px;
+}
+
+aside {
+     position: relative;
+     margin-top: 5px;
+     margin-right: 19px;
+     margin-bottom: 7px;
+     float: right;
+     padding: 16px 16px;
+     background-color: pink;
+     border-radius: 17px;
+}
+
+.hello {
+    font-weight: bold;
+    text-align: center;
+    color: purple;
+}
+
+.intro  {
+    background-color: #F7f1EF;
+    width: 550px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin-left: 20px;
+    border-radius: 17px;
+}
+
+.intro > p {
+    padding: 8px 10px;
+}
+
+/* ---- BEGINNING OF MENU SECTION ---- */
+
+#menu {
+    font-size: 44px;
+    text-align: center;
+    margin: 3px;
+    font-family: 'Niconne', cursive;
+    padding: 3px 0 3px 0;
+    background-color: orange;
+    color: blue;
+    border-radius: 12px;
+}
+
+.menu-body {
+  max-width: 680px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.menu-section {
+  margin-bottom: 20px; 
+  border-radius: 12px;
+  padding: 3px 10px ;
+  background-color:#F7f1EF;
+}
+
+.menu-section-title {
+  font-size: 26px;
+  color: purple;
+  display: block;
+  font-weight:bold;
+  margin: 20px 0; 
+  text-align: Center;
+}
+
+.menu-item {
+  margin: 35px 0;
+  font-size: 18px;
+}
+
+.menu-item-name{
+  font-weight: bold;
+  color: purple;
+  border-bottom: 2px dotted black;
+}
+
+.menu-item-description {
+  font-size: 14px;
+  line-height: 1em;
+}
+
+.menu-item-price{
+  float: right;
+  font-weight: bold;
+  margin-top: -22px;
+}
+
+/* ---- END OF MENU PAGE ---- */
+
+
+/* ---- BEGINNING OF POKER TABLE GALLERY ---- */
+
+.poker-table {
+    position: relative;
+    margin-top: 2px;
+    padding: 10px 14px;
+    margin-left: 10px;  
+}
+
+form {
+    font-size: 18px;
+    background-color: pink;
+    line-height: 1.8em;
+}
+
+.card-text-form {
+    color: red;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+.card-vote {
+  background-color: pink;
+  position: relative;
+  float: left;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 220px;
+  height: 290px;
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+}
+
+.card {
+  position: relative;
+  float: left;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 220px;
+  height: 290px;
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+}
+
+.card-text {
+    text-align: center;
+}
+
+.card img {
+      position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+ 
+.hearts {
+    color: red;
+    font-size: 45px;
+    margin-left: 12px;
+}
+
+.clubs {
+    font-size: 45px;
+    margin-left: 12px;
+}
+
+.diamonds {
+    color: red;
+    font-size: 45px;
+    margin-left: 12px;
+}
+
+.spades {
+    font-size: 45px;
+    margin-left: 12px;
+}
+
+/* ---- END OF POKER TABLE GALLERY ---- */
+
+section a { 
+    text-decoration: none;
+    color: blue;
+    font-size: 29px;
+    font-weight: 500;
+    font-family: 'Niconne', cursive;
+    text-shadow: 1px 1px pink; 
+}
+
+footer { 
+    width: 960px;
+    clear: both;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: yellow;
+    color: purple;
+    font-weight: bold;
+    text-align: center;
+}
