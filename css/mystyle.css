@@ -99,16 +99,11 @@ table {
     color: white;
 }
 
-
-/* TURNS OUT MESSED UP MY CSS STYLING BECAUSE ON MICROSOFT INTERNET EXPLORER CHANGES DO NOT REGISTER CORRECTLY IN THAT BROWSER. No wonder the cloud9 previes screen looked like changes rendered, but when refreshed or tried several times to pop up into internet explorer browser looked different. Must go back to redo some parts*/
-
 .nav {
-     width: 945px; 
-     position: relative; /*should this be here or be absolute?*/
-     text-align: center; 
+    width: 945px; 
+    position: relative; /*should this be here or be absolute?*/
+    text-align: center; 
     margin-left: 6px;
-
-   /*I would think to use z-index or margin negative to not have links flush to right...and would be done in nav li a area*/
     padding-top: 8px;  
     padding-bottom: 8px;
     border-radius: 38px;
