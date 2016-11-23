@@ -344,10 +344,10 @@ form {
 section a { 
     text-decoration: none;
     color: blue;
-    font-size: 29px;
+    font-size: 30px;
     font-weight: 500;
     font-family: 'Niconne', cursive;
-    text-shadow: 1px 1px pink; 
+    text-shadow: 1px 1px orange; 
 }
 
 footer { 
