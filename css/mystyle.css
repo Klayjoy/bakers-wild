@@ -80,7 +80,7 @@ table {
     margin: 0 auto; /*is it correct to put this?*/
 }
 
-#banner > img {
+#banner img {
     display: block;
     position: relative;
     margin: 13px 24px 12px 24px;
@@ -101,7 +101,7 @@ table {
 
 .nav {
     width: 945px; 
-    position: relative; /*should this be here or be absolute?*/
+    position: relative; 
     text-align: center; 
     margin-left: 6px;
     padding-top: 8px;  
@@ -110,26 +110,27 @@ table {
     background-color: yellow;
 }
 
-.nav > ul { /*should this have a greater than sign? Added in case. Youtube guy didn't have a nav ul. greater than points to child of parent,fyi*/
+.nav > ul { /*should this have a greater than sign? Added in case. Youtube guy didn't have a nav ul. greater than points to child of parent,fyi. I am also confused since I have this as a nav class rather than nav alone. 11/23*/
     list-style-type: none; 
     margin: 0;
     padding: 0;
+    text-align: center; 
 }
 
 .nav > li {  
-    text-align: center; /* 11/16 not sure if needed this. added after reading W3Schools*/
-    font-weight: 900; 
+    font-weight: 700; 
     font-size: 19px; 
-    border:3px dotted red;
+    border:2px dotted red; /* 11/23 so heavy on ipad with size and font weight that look like dashes when on smaller screen. Make smaller than 3px*/
     border-radius: 25px;  
-    padding: 2px 13px 3px 13px; 
+    /* padding: 2px 13px 3px 13px; */ /*11/23 ghosted out padding to try line height */
     display: inline-block; 
     background-color: white;
-    
-     /*Hate how squashed together link buttons are! Would it help to put breaks between links? Nope. end up being tiered. I like youtube English guy I found. https://www.youtube.com/watch?v=X_skOPBsYZE*/ /*maybe also check out w3schools: 9.4.1 Block formatting contexts 9.4.2 Inline formatting contexts*/
+    line-height: 28px; /* 11/23 added line-height*/
 }
+  
+     /*Hate how squashed together link buttons are! Would it help to put breaks between links? Nope. end up being tiered. I like youtube English guy I found. https://www.youtube.com/watch?v=X_skOPBsYZE*/ /*maybe also check out w3schools: 9.4.1 Block formatting contexts 9.4.2 Inline formatting contexts*/
 
-.nav > li > a { /*i added a:link 11/17. then i got rid of greater than signs and link. why can't i see this reflected on big screen??? */ /* 11/14 added greater than signs per youtube. Cira's example different as she has a:link, but I only want hover color. Info on W3schools differs from what saw online. 11/16 */  /*should I put back greater signs? Why does preview look totally diff than large pop out? Is it cause in Internet Explorer??? YES...I went to Chrome and totally diff. Normally work on Firefox. On Microsoft 10 laptop now, but swithed to chrome. 11/17*/
+.nav > li > a { /*i added a:link 11/17. then i got rid of greater than signs and link. why can't i see this reflected on big screen??? */ /* 11/14 added greater than signs per youtube. Cira's example different as she has a:link, but I only want hover color. Info on W3schools differs from what saw online. 11/16 */  /*should I put back greater signs? Why does preview look totally diff than large pop out? Is it cause in Internet Explorer??? YES...I went to Chrome and totally diff. Normally work on Firefox. On Microsoft 10 laptop now, but swithed to chrome. 11/17*/ /* 11/23 shld this code only have .nav a? */
 
     text-decoration: none;
     display: block;
@@ -139,7 +140,7 @@ table {
     border-radius: 25px; /*added border radius to see if more filled in. DOES IT EVEN MAKE SENSE TO HAVE BORDER RADIUS FOR A LINK??*/
    }
  
- .nav > li> a:hover {  /*how can I get hover background color to fill entire button?*/
+ .nav > li> a:hover {  /*how can I get hover background color to fill entire button?*/ /*11/23 shld this just be .nav a:hover? */
     color: purple;
     font-weight: 600;
     background-color: orange;
@@ -157,10 +158,23 @@ aside {
      border-radius: 17px;
 }
 
+aside img {
+    border-radius: 10px;
+}
+
 .hello {
-    font-size: 16px;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: -12px;
+    text-align: center;
+    color: purple;
+}
+
+.hello-frog {
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
+    line-height: 1.2em;
     color: purple;
 }
 
